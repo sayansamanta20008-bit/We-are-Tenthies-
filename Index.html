@@ -4,360 +4,217 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="theme-color" content="#e8ff47"/>
-<meta name="description" content="tenthie.s - 100% Free CBSE Study App with Lectures, Quizzes & XP System"/>
+<meta name="description" content="tenthie.s - 100% Free CBSE Study App with Lectures, Quizzes & XP System by Sayan Samanta"/>
+<meta name="keywords" content="CBSE, ICSE, Study, Free, Online Learning, NCERT, Board Exam"/>
+<meta property="og:type" content="website"/>
 <meta property="og:title" content="tenthie.s – Free Study App 🔥"/>
-<meta property="og:description" content="100% Free CBSE, ICSE Study App. Lectures, Quizzes, Earn XP!"/>
+<meta property="og:description" content="100% Free CBSE, ICSE Study App. Lectures, Quizzes, Earn XP! No cap fr fr"/>
+<meta property="og:url" content="https://tenthies.in"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="tenthie.s – Free Study App 🔥"/>
+<meta name="twitter:creator" content="@sayan_08_"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="tenthie.s"/>
 <link rel="manifest" href="manifest.json"/>
-<title> we are tenthie.s  🔥</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23e8ff47' width='100' height='100' rx='20'/><text x='50' y='70' font-size='50' text-anchor='middle' fill='%23000' font-weight='bold'>📚</text></svg>"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%23e8ff47' width='180' height='180'/><text x='90' y='135' font-size='80' text-anchor='middle' fill='%23000' font-weight='bold'>TS</text></svg>"/>
+<title>tenthie.s – Free Study App by Sayan Samanta 🔥</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--bg:#08090f;--surface:#0f1018;--card:#141520;--card2:#1a1d2e;--border:#252840;--accent:#e8ff47;--accent2:#ff4f6d;--accent3:#47c8ff;--accent4:#b47fff;--text:#f0f2ff;--muted:#6b7099;--success:#4fffb0;--warn:#ffb347}
+:root{
+  --bg:#08090f;--surface:#0f1018;--card:#141520;--card2:#1a1d2e;
+  --border:#252840;--accent:#e8ff47;--accent2:#ff4f6d;--accent3:#47c8ff;
+  --accent4:#b47fff;--text:#f0f2ff;--muted:#6b7099;--success:#4fffb0;--warn:#ffb347;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1000;opacity:.4}
+.glow-1{position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(232,255,71,.04) 0%,transparent 70%);top:-200px;left:-200px;pointer-events:none;z-index:0}
+.glow-2{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(71,200,255,.05) 0%,transparent 70%);bottom:-100px;right:-100px;pointer-events:none;z-index:0}
+
 nav{position:sticky;top:0;z-index:200;backdrop-filter:blur(20px);background:rgba(8,9,15,.88);border-bottom:1px solid var(--border);padding:0 28px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;color:var(--accent);cursor:pointer}
-.nav-links{display:flex;gap:3px}
-.nav-links button{background:none;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.84rem;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer;transition:.15s}
+.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:-1px;color:var(--accent);white-space:nowrap;cursor:pointer}
+.logo em{color:var(--text);font-style:normal}
+.nav-links{display:flex;gap:3px;flex-wrap:nowrap}
+.nav-links button{background:none;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:.84rem;font-weight:600;padding:7px 12px;border-radius:8px;cursor:pointer;transition:.15s;white-space:nowrap}
 .nav-links button:hover,.nav-links button.active{background:var(--card2);color:var(--text)}
-.nav-right{display:flex;align-items:center;gap:10px}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .xp-pill{display:flex;align-items:center;gap:7px;background:rgba(232,255,71,.08);border:1px solid rgba(232,255,71,.2);border-radius:999px;padding:6px 16px;font-weight:700;font-size:.88rem;color:var(--accent)}
 .streak-pill{display:flex;align-items:center;gap:5px;background:rgba(255,79,109,.08);border:1px solid rgba(255,79,109,.2);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.88rem;color:var(--accent2)}
 .admin-btn{background:rgba(180,127,255,.12);border:1px solid rgba(180,127,255,.3);border-radius:8px;color:var(--accent4);font-weight:700;padding:6px 14px;cursor:pointer;font-size:.82rem;transition:.2s}
-.admin-btn:hover{background:rgba(180,127,255,.2)}
+.admin-btn:hover{background:rgba(180,127,255,.2);border-color:var(--accent4)}
+
 .page{display:none;animation:fadeUp .35s ease both}
 .page.active{display:block}
+
 .section{max-width:1100px;margin:0 auto;padding:36px 28px;position:relative;z-index:1}
-.hero{padding:72px 28px 52px;max-width:1100px;margin:0 auto}
+.sec-tag{display:inline-block;background:rgba(232,255,71,.08);color:var(--accent);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:999px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.sec-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:-.5px;margin-bottom:6px}
+.sec-sub{color:var(--muted);font-size:.92rem;margin-bottom:22px;line-height:1.6}
+.sec-sub a{color:var(--accent3);text-decoration:none;font-weight:700}
+
+.btn{font-family:'DM Sans',sans-serif;font-weight:700;border:none;border-radius:11px;cursor:pointer;transition:transform .15s,box-shadow .15s,opacity .15s;font-size:.93rem}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn-xl{padding:14px 32px;font-size:1rem}
+.btn-primary{background:var(--accent);color:#08090f;box-shadow:0 4px 24px rgba(232,255,71,.2)}
+.btn-primary:hover{box-shadow:0 6px 32px rgba(232,255,71,.35)}
+.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border)}
+.btn-ghost:hover{border-color:var(--accent3);color:var(--accent3)}
+.btn-sm{padding:8px 18px;font-size:.85rem}
+.btn-danger{background:var(--accent2);color:#fff;box-shadow:0 4px 18px rgba(255,79,109,.2)}
+.btn-danger:hover{box-shadow:0 6px 28px rgba(255,79,109,.35)}
+.btn-success{background:var(--success);color:#08090f;box-shadow:0 4px 18px rgba(79,255,176,.2)}
+.btn-disabled{background:var(--card2);color:var(--muted);border:1px solid var(--border);cursor:not-allowed;opacity:.6}
+
+.hero{padding:72px 28px 52px;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--card2);border:1px solid var(--border);border-radius:999px;padding:6px 16px;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:22px;letter-spacing:.5px;text-transform:uppercase}
+.hero-eyebrow span{color:var(--accent)}
 h1.hero-h{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,5.5vw,4.6rem);font-weight:800;line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
 h1.hero-h .hl{color:var(--accent)}
 h1.hero-h .hl2{color:var(--accent3)}
-.hero-sub{color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:34px}
+.hero-sub{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:520px;margin-bottom:34px}
 .hero-sub strong{color:var(--text)}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
-.btn{font-family:'DM Sans',sans-serif;font-weight:700;border:none;border-radius:11px;cursor:pointer;transition:transform .15s,box-shadow .15s;font-size:.93rem}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--accent);color:#08090f;box-shadow:0 4px 24px rgba(232,255,71,.2);padding:14px 32px}
-.btn-primary:hover{box-shadow:0 6px 32px rgba(232,255,71,.35)}
-.btn-ghost{background:var(--card2);color:var(--text);border:1px solid var(--border);padding:14px 32px}
-.btn-ghost:hover{border-color:var(--accent3)}
-.btn-sm{padding:8px 18px;font-size:.85rem}
-.btn-success{background:var(--success);color:#08090f;box-shadow:0 4px 18px rgba(79,255,176,.2);padding:10px 20px}
-.btn-danger{background:var(--accent2);color:#fff;box-shadow:0 4px 18px rgba(255,79,109,.2);padding:10px 20px}
+
+.announcement-banner{background:linear-gradient(135deg,rgba(255,179,71,.12),rgba(232,255,71,.08));border:1px solid rgba(255,179,71,.3);border-radius:16px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.announcement-icon{font-size:1.6rem;flex-shrink:0}
+.announcement-content{flex:1;min-width:200px}
+.announcement-title{font-weight:800;font-size:.95rem;margin-bottom:2px;color:var(--warn)}
+.announcement-text{color:var(--muted);font-size:.85rem;line-height:1.4}
+.close-announcement{background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.2rem;flex-shrink:0;transition:.2s}
+.close-announcement:hover{color:var(--text)}
+
+.meme-banner{background:linear-gradient(135deg,rgba(180,127,255,.07),rgba(232,255,71,.05));border:1px solid rgba(180,127,255,.2);border-radius:18px;padding:20px 24px;display:flex;align-items:center;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.meme-text .meme-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;margin-bottom:4px}
+.meme-text .meme-sub{color:var(--muted);font-size:.85rem}
+
+.creator-card{background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(180,127,255,.06));border:1px solid rgba(71,200,255,.15);border-radius:18px;padding:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:32px}
+.creator-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent3),var(--accent4));display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;border:2px solid rgba(71,200,255,.3)}
+.creator-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:4px}
+.creator-role{color:var(--muted);font-size:.85rem;margin-bottom:10px}
+.creator-links{display:flex;gap:8px;flex-wrap:wrap}
+.ig-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;border-radius:8px;color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.8rem;padding:7px 14px;cursor:pointer;text-decoration:none;transition:opacity .15s}
+.ig-btn:hover{opacity:.85}
+
 .stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:32px}
 .stat-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;cursor:pointer;transition:.2s}
 .stat-box:hover{border-color:var(--accent3);transform:translateY(-2px)}
 .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--accent)}
-.stat-label{color:var(--muted);font-size:.78rem;font-weight:600;text-transform:uppercase;margin-top:2px}
-.announcement-banner{background:linear-gradient(135deg,rgba(255,179,71,.12),rgba(232,255,71,.08));border:1px solid rgba(255,179,71,.3);border-radius:16px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.announcement-content{flex:1}
-.announcement-title{font-weight:800;font-size:.95rem;margin-bottom:2px;color:var(--warn)}
-.announcement-text{color:var(--muted);font-size:.85rem;line-height:1.4}
-.creator-card{background:linear-gradient(135deg,rgba(71,200,255,.06),rgba(180,127,255,.06));border:1px solid rgba(71,200,255,.15);border-radius:18px;padding:22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:32px}
-.creator-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent3),var(--accent4));display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0}
-.creator-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;margin-bottom:4px}
-.creator-role{color:var(--muted);font-size:.85rem;margin-bottom:10px}
-.ig-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;border-radius:8px;color:#fff;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.8rem;padding:7px 14px;cursor:pointer;text-decoration:none;transition:opacity .15s}
-.ig-btn:hover{opacity:.85}
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);z-index:5000;align-items:center;justify-content:center;padding:20px}
-.modal-overlay.open{display:flex;animation:fadeUp .2s ease}
-.modal{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;max-width:580px;width:100%;max-height:90vh;overflow-y:auto}
-.modal-title{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:6px}
-.modal-close{margin-top:16px;width:100%;padding:11px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--muted);font-weight:700;cursor:pointer}
-.xp-toast{position:fixed;top:74px;right:20px;background:var(--accent);color:#08090f;padding:11px 22px;border-radius:12px;font-weight:800;font-size:.97rem;z-index:9999;transform:translateY(-20px);opacity:0;transition:.35s cubic-bezier(.34,1.56,.64,1)}
-.xp-toast.pop{transform:translateY(0);opacity:1}
-footer{text-align:center;padding:36px 20px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--border);margin-top:20px}
-@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:600px){nav{padding:0 14px}.hero{padding:48px 16px 40px}.section{padding:28px 16px}h1.hero-h{font-size:2.3rem}}
-</style>
-</head>
-<body>
-<div class="xp-toast" id="toast">⚡ XP!</div>
+.stat-label{color:var(--muted);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
 
-<nav>
-  <div class="logo" onclick="gotoPage('home')">tenthie<em style="color:#f0f2ff">.s</em></div>
-  <div class="nav-links">
-    <button class="active" onclick="gotoPage('home',this)">🏠 Home</button>
-    <button onclick="gotoPage('learn',this)">📚 Learn</button>
-    <button onclick="gotoPage('resources',this)">🌐 Resources</button>
-    <button onclick="gotoPage('quiz',this)">⚡ Quiz</button>
-    <button onclick="gotoPage('tips',this)">💡 Tips</button>
-    <button onclick="gotoPage('ranks',this)">🏆 Ranks</button>
-  </div>
-  <div class="nav-right">
-    <div class="streak-pill">🔥 <span id="navStreak">0</span>d</div>
-    <div class="xp-pill">⚡ <span id="xpDisplay">0</span> XP</div>
-    <button class="admin-btn" onclick="toggleAdmin()">⚙️ Admin</button>
-  </div>
-</nav>
+.streak-bar{background:linear-gradient(90deg,rgba(255,79,109,.07),rgba(255,179,71,.07));border:1px solid rgba(255,79,109,.2);border-radius:14px;padding:16px 22px;display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.streak-info strong{display:block;font-weight:800;font-size:1rem}
+.streak-info span{color:var(--muted);font-size:.84rem}
+.streak-days{display:flex;gap:6px;margin-left:auto;flex-wrap:wrap}
+.streak-dot{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;border:2px solid var(--border);background:var(--card);transition:.3s;cursor:pointer}
+.streak-dot.done{background:rgba(255,79,109,.15);border-color:var(--accent2)}
+.streak-dot.today{background:rgba(255,179,71,.15);border-color:var(--warn);animation:pulse 2s infinite}
 
-<div class="page active" id="pg-home">
-  <div class="hero">
-    <div id="announcementContainer"></div>
-    <div style="display:inline-flex;align-items:center;gap:8px;background:var(--card2);border:1px solid var(--border);border-radius:999px;padding:6px 16px;font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:22px">
-      🎓 CBSE · ICSE · State Board · <span style="color:var(--accent)">100% FREE</span>
-    </div>
-    
-    <h1 class="hero-h">
-      Stop Crying Over<br/>
-      <span class="hl">Textbooks.</span><br/>
-      <span class="hl2">Start Actually Learning.</span>
-    </h1>
-    
-    <p class="hero-sub">
-      Notes, lectures, quizzes & exam tips — <strong>all free, all online.</strong><br/>
-      Designed so you pass board exams without spending a single rupee.
-    </p>
-    
-    <div class="hero-ctas">
-      <button class="btn btn-primary" onclick="gotoPage('learn')">Start Learning 🚀</button>
-      <button class="btn btn-ghost" onclick="gotoPage('quiz')">Take a Quiz ⚡</button>
-      <button class="btn btn-ghost" onclick="gotoPage('resources')">Free Resources 📚</button>
-    </div>
+.board-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.board-tab{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 22px;font-weight:700;font-size:.88rem;cursor:pointer;transition:.15s;color:var(--muted);font-family:'DM Sans',sans-serif}
+.board-tab:hover,.board-tab.act{background:var(--card);color:var(--text);border-color:var(--accent)}
+.board-tab.act{color:var(--accent)}
 
-    <div class="creator-card">
-      <div class="creator-avatar">🧑‍💻</div>
-      <div style="flex:1">
-        <div class="creator-name">Sayan Samanta</div>
-        <div class="creator-role">Creator & Free Education Advocate ✨</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <a class="ig-btn" href="https://instagram.com/sayan_08_" target="_blank">📸 @sayan_08_</a>
-          <a class="ig-btn" href="https://instagram.com/tenthie.s" target="_blank">📸 @tenthie.s</a>
-        </div>
-      </div>
-      <div style="text-align:center">
-        <div style="font-size:2rem">🔥</div>
-        <div style="font-weight:800;font-size:.9rem;color:var(--accent)" id="homeStreakLabel">0-Day Streak!</div>
-      </div>
-    </div>
+.class-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:12px;margin-bottom:28px}
+.class-card{background:var(--card);border:2px solid var(--border);border-radius:16px;padding:20px 16px;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+.class-card:hover{border-color:var(--accent4);transform:translateY(-3px)}
+.class-card.sel{border-color:var(--accent);background:rgba(232,255,71,.04)}
+.cc-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:var(--accent4);line-height:1}
+.cc-label{font-weight:700;margin:6px 0 3px}
+.cc-sub{color:var(--muted);font-size:.78rem;line-height:1.4}
+.cc-badge{position:absolute;top:12px;right:12px;background:rgba(180,127,255,.12);color:var(--accent4);font-size:.68rem;font-weight:800;padding:3px 9px;border-radius:999px}
+.class-card.sel .cc-num{color:var(--accent)}
 
-    <div class="stats-row">
-      <div class="stat-box"><div class="stat-num">4</div><div class="stat-label">Classes</div></div>
-      <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Boards</div></div>
-      <div class="stat-box"><div class="stat-num">500+</div><div class="stat-label">Chapters</div></div>
-      <div class="stat-box"><div class="stat-num">2000+</div><div class="stat-label">Questions</div></div>
-      <div class="stat-box"><div class="stat-num" id="homeXP">0</div><div class="stat-label">Your XP</div></div>
-      <div class="stat-box"><div class="stat-num">₹0</div><div class="stat-label">Cost</div></div>
-    </div>
-  </div>
-</div>
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:28px}
+.subj-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:16px 12px;text-align:center;cursor:pointer;transition:.2s}
+.subj-card:hover{border-color:var(--accent3);transform:translateY(-2px)}
+.subj-icon{font-size:1.9rem;margin-bottom:7px}
+.subj-name{font-weight:700;font-size:.88rem;margin-bottom:8px}
+.prog-bar{height:5px;background:var(--border);border-radius:999px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--accent3),var(--accent4));border-radius:999px;transition:width .8s ease}
+.prog-pct{font-size:.73rem;color:var(--muted);margin-top:4px}
 
-<div class="page" id="pg-learn">
-  <div class="section">
-    <h2>📚 Learn - Choose Your Course</h2>
-    <p>CBSE, ICSE, State Board</p>
-    <button class="btn btn-primary btn-sm" onclick="alert('Learn module coming soon!')">View Courses</button>
-  </div>
-</div>
+.chapter-list{display:grid;gap:12px;margin-top:16px}
+.ch-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;transition:.2s}
+.ch-card:hover{border-color:var(--border);box-shadow:0 4px 20px rgba(0,0,0,.3);cursor:pointer}
+.ch-card.watched{border-color:rgba(79,255,176,.2);background:rgba(79,255,176,.03)}
+.ch-icon{font-size:1.7rem;flex-shrink:0}
+.ch-info{flex:1;min-width:160px}
+.ch-title{font-weight:700;font-size:.95rem;margin-bottom:3px}
+.ch-sub{color:var(--muted);font-size:.8rem}
+.ch-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-left:auto}
+.ch-watched-badge{font-size:.75rem;font-weight:700;color:var(--success);background:rgba(79,255,176,.1);border:1px solid rgba(79,255,176,.2);padding:4px 10px;border-radius:6px}
 
-<div class="page" id="pg-resources">
-  <div class="section">
-    <h2>🌐 Free Resources</h2>
-    <button class="btn btn-primary btn-sm" onclick="window.open('https://ncert.nic.in/textbook.php')">📖 NCERT Books</button>
-    <button class="btn btn-primary btn-sm" onclick="window.open('https://www.youtube.com/@PhysicsWallah')">▶️ Physics Wallah</button>
-    <button class="btn btn-primary btn-sm" onclick="window.open('https://www.cbse.gov.in/')">🏛️ CBSE Official</button>
-  </div>
-</div>
+.res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.res-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.2s;cursor:pointer}
+.res-card:hover{border-color:var(--accent2);transform:translateY(-2px);box-shadow:0 6px 28px rgba(255,79,109,.08)}
+.res-thumb{height:110px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;position:relative}
+.res-thumb.yt{background:linear-gradient(135deg,rgba(255,0,0,.12),rgba(255,79,109,.06))}
+.res-thumb.book{background:linear-gradient(135deg,rgba(71,200,255,.1),rgba(180,127,255,.07))}
+.res-thumb.notes{background:linear-gradient(135deg,rgba(232,255,71,.07),rgba(79,255,176,.07))}
+.res-body{padding:14px}
+.res-source{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:5px}
+.res-source.yt-color{color:var(--accent2)}
+.res-source.ncert-color{color:var(--accent3)}
+.res-source.free-color{color:var(--success)}
+.res-title{font-weight:700;font-size:.93rem;margin-bottom:5px;line-height:1.4}
+.res-desc{color:var(--muted);font-size:.8rem;line-height:1.5;margin-bottom:12px}
+.res-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.res-tag{background:var(--card2);color:var(--muted);font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:6px}
+.res-tag.free{background:rgba(79,255,176,.08);color:var(--success)}
 
-<div class="page" id="pg-quiz">
-  <div class="section">
-    <h2>⚡ Quiz</h2>
-    <p>Answer correctly to earn XP!</p>
-    <button class="btn btn-primary btn-sm" onclick="startQuiz()">Start Quiz</button>
-    <div id="quizContainer" style="margin-top:20px"></div>
-  </div>
-</div>
+.quiz-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:30px;max-width:700px}
+.quiz-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.quiz-qnum{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem}
+.quiz-score-live{color:var(--accent);font-weight:700;font-size:.88rem}
+.q-prog{height:6px;background:var(--border);border-radius:999px;overflow:hidden;margin-bottom:26px}
+.q-prog-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent3));border-radius:999px;transition:width .4s ease}
+.q-subject-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(232,255,71,.07);border:1px solid rgba(232,255,71,.15);border-radius:8px;padding:5px 12px;font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:14px}
+.q-text{font-size:1.05rem;font-weight:600;line-height:1.6;margin-bottom:20px;color:var(--text)}
+.q-opts{display:grid;gap:9px}
+.q-opt{background:var(--card2);border:2px solid var(--border);border-radius:12px;padding:12px 16px;cursor:pointer;font-weight:600;font-size:.93rem;text-align:left;font-family:'DM Sans',sans-serif;color:var(--text);transition:.15s;display:flex;align-items:center;gap:12px;width:100%}
+.q-opt:hover:not(:disabled){border-color:var(--accent4);background:rgba(180,127,255,.06)}
+.q-opt:disabled{cursor:default}
+.q-opt.correct{border-color:var(--success)!important;background:rgba(79,255,176,.08)!important;color:var(--success)!important}
+.q-opt.wrong{border-color:var(--accent2)!important;background:rgba(255,79,109,.08)!important;color:var(--accent2)!important}
+.opt-letter{width:28px;height:28px;border-radius:7px;background:var(--border);display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:800;flex-shrink:0}
+.q-feedback{margin-top:16px;padding:14px 18px;border-radius:12px;font-weight:600;font-size:.88rem;line-height:1.5;display:none}
+.q-feedback.show{display:block;animation:fadeUp .3s ease}
+.q-feedback.ok{background:rgba(79,255,176,.07);border:1px solid rgba(79,255,176,.2);color:var(--success)}
+.q-feedback.no{background:rgba(255,79,109,.07);border:1px solid rgba(255,79,109,.2);color:var(--accent2)}
+.q-meme{font-size:1rem;margin-top:5px}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;flex-wrap:wrap;gap:10px}
+.q-select-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
+.q-select{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.87rem;color:var(--text);cursor:pointer}
+.q-select:focus{outline:1px solid var(--accent)}
 
-<div class="page" id="pg-tips">
-  <div class="section">
-    <h2>💡 Study Tips by Sayan</h2>
-    <ul style="color:var(--muted);line-height:2">
-      <li>✨ Keep your study environment clean and organized</li>
-      <li>🔁 Use spaced repetition - review on Day 1, 3, 7, 21</li>
-      <li>📖 Master NCERT first - everything else is supplement</li>
-      <li>💤 Sleep 7-8 hours - it consolidates memory</li>
-      <li>📋 Create a formula sheet and revise daily</li>
-      <li>🗣️ Read aloud - triple encoding (visual + auditory + motor)</li>
-      <li>📚 Solve previous year papers - patterns repeat</li>
-    </ul>
-  </div>
-</div>
+.quiz-locked{background:var(--card);border:1px solid rgba(255,179,71,.25);border-radius:20px;padding:36px 30px;max-width:700px;text-align:center}
+.quiz-locked .lock-icon{font-size:3.5rem;margin-bottom:16px}
+.quiz-locked .lock-title{font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:8px}
+.quiz-locked .lock-sub{color:var(--muted);font-size:.92rem;line-height:1.6;margin-bottom:24px}
 
-<div class="page" id="pg-ranks">
-  <div class="section">
-    <h2>🏆 Leaderboard</h2>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px">
-      <div style="display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid var(--border);font-weight:800">
-        <span>Rank</span><span>Name</span><span style="color:var(--accent)">XP</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;padding:10px">
-        <span>🥇</span><span>Ananya S.</span><span style="color:var(--accent)">4,200</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;padding:10px">
-        <span>🥈</span><span>Rohan M.</span><span style="color:var(--accent)">3,850</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;padding:10px">
-        <span>🥉</span><span>Priya K.</span><span style="color:var(--accent)">3,610</span>
-      </div>
-      <div style="display:flex;justify-content:space-between;padding:10px;background:rgba(232,255,71,.04);border-radius:8px">
-        <span>—</span><span>You</span><span id="yourXpRank" style="color:var(--accent)">0</span>
-      </div>
-    </div>
-    <div style="margin-top:20px">
-      <p style="color:var(--muted)"><strong>📊 Your Stats:</strong></p>
-      <p>🔥 Streak: <strong id="statsStreak" style="color:var(--accent2)">0 days</strong></p>
-      <p>⚡ Total XP: <strong id="statsXP" style="color:var(--accent)">0</strong></p>
-      <p>🎬 Lectures: <strong id="statsLectures" style="color:var(--accent3)">0</strong></p>
-    </div>
-  </div>
-</div>
+.result-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:center;max-width:560px;display:none;margin-top:20px}
+.result-emoji{font-size:4rem;margin-bottom:14px}
+.result-title{font-family:'Syne',sans-serif;font-size:1.7rem;font-weight:800;margin-bottom:8px}
+.result-score{font-size:3.2rem;font-weight:800;color:var(--accent);font-family:'Syne',sans-serif;margin-bottom:8px}
+.result-meme{color:var(--muted);font-size:.95rem;margin-bottom:22px;line-height:1.5}
 
-<div class="page" id="pg-admin">
-  <div class="section">
-    <h2>🔧 Admin Control Panel</h2>
-    <button class="btn btn-ghost btn-sm" onclick="toggleAdmin()">← Back</button>
-    
-    <div style="background:linear-gradient(135deg,rgba(180,127,255,.1),rgba(71,200,255,.06));border:2px solid rgba(180,127,255,.3);border-radius:20px;padding:24px;margin-top:20px">
-      <h3 style="color:var(--accent4);margin-bottom:20px">📢 Broadcast Announcement</h3>
-      <input style="width:100%;padding:10px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);margin-bottom:10px" type="text" id="annoTitle" placeholder="Title" value="🚀 New Update!"/>
-      <textarea style="width:100%;padding:10px;background:var(--card2);border:1px solid var(--border);border-radius:8px;color:var(--text);margin-bottom:10px;min-height:80px" id="annoDesc" placeholder="Description">New features added!</textarea>
-      <button class="btn btn-primary" onclick="postAnnouncement()" style="width:100%;margin-bottom:20px">📤 Post Announcement</button>
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
+.tip-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;transition:.2s;cursor:pointer}
+.tip-card:hover{border-color:var(--accent4);transform:translateY(-2px)}
+.tip-icon{font-size:1.8rem;margin-bottom:10px}
+.tip-title{font-family:'Syne',sans-serif;font-weight:800;font-size:.98rem;margin-bottom:6px;color:var(--accent3)}
+.tip-text{color:var(--muted);font-size:.86rem;line-height:1.65}
+.tip-meme{margin-top:10px;font-size:.8rem;color:var(--accent);font-style:italic}
 
-      <h3 style="color:var(--accent4);margin-bottom:10px;margin-top:20px">⚡ Quick Actions</h3>
-      <button class="btn btn-success" onclick="adminAddXP(100)" style="width:100%;margin-bottom:8px">💰 Add +100 XP to All</button>
-      <button class="btn btn-danger" onclick="adminResetAll()" style="width:100%">🔄 Reset All Data</button>
-
-      <h3 style="color:var(--accent4);margin-top:20px;margin-bottom:10px">👥 Analytics</h3>
-      <p>Total XP: <strong id="totalXP" style="color:var(--accent)">0</strong></p>
-      <p>Lectures Watched: <strong id="totalLectures" style="color:var(--accent3)">0</strong></p>
-    </div>
-  </div>
-</div>
-
-<footer>
-  <div style="margin-bottom:10px">🎓 <strong>tenthie.s</strong> — Free Education For Every Student</div>
-  <div style="margin-bottom:8px">Built with ❤️ by <strong>Sayan Samanta</strong></div>
-  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:10px">
-    <a href="https://instagram.com/sayan_08_" target="_blank">📸 @sayan_08_</a>
-    <a href="https://instagram.com/tenthie.s" target="_blank">📸 @tenthie.s</a>
-  </div>
-  <div>"Padhai sirf unke liye nahi jo afford kar sakte hain" 🙏</div>
-</footer>
-
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').catch(e => console.log('SW not available'));
-}
-
-let state = {xp: 0, streak: 0, lastVisit: '', watchedLectures: [], quizzesCompleted: 0};
-
-function loadState(){
-  let saved = localStorage.getItem('tenthies_state');
-  if(saved) state = JSON.parse(saved);
-  updateStreak();
-  updateUI();
-}
-
-function saveState(){
-  localStorage.setItem('tenthies_state', JSON.stringify(state));
-}
-
-function updateStreak(){
-  const today = new Date().toDateString();
-  if(!state.lastVisit){
-    state.streak = 1;
-    state.lastVisit = today;
-  } else if(state.lastVisit !== today){
-    const lastDate = new Date(state.lastVisit);
-    const todayDate = new Date(today);
-    const diff = Math.round((todayDate - lastDate) / (1000*60*60*24));
-    if(diff === 1) state.streak++;
-    else if(diff > 1) state.streak = 1;
-    state.lastVisit = today;
-  }
-  saveState();
-}
-
-function updateUI(){
-  document.getElementById('xpDisplay').textContent = state.xp;
-  document.getElementById('navStreak').textContent = state.streak;
-  document.getElementById('homeXP').textContent = state.xp;
-  document.getElementById('homeStreakLabel').textContent = state.streak + '-Day Streak!';
-  document.getElementById('statsStreak').textContent = state.streak + ' days';
-  document.getElementById('statsXP').textContent = state.xp;
-  document.getElementById('statsLectures').textContent = state.watchedLectures.length;
-  document.getElementById('yourXpRank').textContent = state.xp;
-}
-
-function xpAdd(amt){
-  state.xp += amt;
-  saveState();
-  updateUI();
-  showToast(`⚡ +${amt} XP!`);
-}
-
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('pop');
-  setTimeout(() => t.classList.remove('pop'), 2200);
-}
-
-function gotoPage(id, btn){
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
-  document.getElementById('pg-' + id).classList.add('active');
-  if(btn) btn.classList.add('active');
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-function toggleAdmin(){
-  const pwd = prompt('🔐 Admin Password?');
-  if(pwd === 'tenthies123'){
-    gotoPage('admin');
-    showToast('✅ Admin Access Granted!');
-  } else {
-    showToast('❌ Wrong Password!');
-  }
-}
-
-function postAnnouncement(){
-  const title = document.getElementById('annoTitle').value;
-  const desc = document.getElementById('annoDesc').value;
-  const html = `
-    <div class="announcement-banner">
-      <div style="font-size:1.6rem">📢</div>
-      <div class="announcement-content">
-        <div class="announcement-title">${title}</div>
-        <div class="announcement-text">${desc}</div>
-      </div>
-    </div>`;
-  document.getElementById('announcementContainer').innerHTML = html;
-  showToast('📢 Announcement posted!');
-  localStorage.setItem('announcement', html);
-}
-
-function startQuiz(){
-  const questions = [
-    {q: 'What is 2+2?', opts: ['3', '4', '5', '6'], ans: 1},
-    {q: 'Which is the largest planet?', opts: ['Earth', 'Jupiter', 'Mars', 'Venus'], ans: 1},
-    {q: 'What is the capital of India?', opts: ['Mumbai', 'New Delhi', 'Bangalore', 'Kolkata'], ans: 1}
-  ];
-  
-  let score = 0;
-  let html = '<div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px">';
-  
-  questions.forEach((q, i) => {
-    html += `<div style="margin-bottom:20px">
-      <p style="font-weight:700;margin-bottom:10px">${i+1}. ${q.q}</p>`;
-    q.opts.forEach((opt, idx) => {
-      html += `<label style="display:block;margin-bottom:5px;cursor:pointer">
-        <input type="radio" name="q${i}" value="${idx}" onchange="updateScore(${i}, ${idx}, ${q.ans})"/>
-        ${opt}
-      </label>`;
-    });
-    html += '</div>';
-  });
-  
-  html += '<button class="btn btn-primary" onclick="submitQuiz()">Submit Quiz</button></div>';
-  document.getElementById('quizCo
+.lb-wrap{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.lb-head{background:linear-gradient(90deg,rgba(232,255,71,.06),rgba(71,200,255,.06));padding:18px 24px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.lb-row{display:flex;align-items:center;gap:14px;padding:14px 24px;border-bottom:1px solid var(--border);transition:.15s}
+.lb-row:last-child{border-bottom:none}
+.lb-row:hover{background:rgba(255,255,255,.02)}
+.lb-rank{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;width:28px;color:var(--muted)}
+.lb-rank.g{color:#ffd700}.lb-rank.s{color:#c0c0c0}.lb-rank.b{color:#cd7f32}
+.lb-av{width:36px;height:36px;border-radius:50%;background:var(--card2);border:2px solid var(--border);display:flex;align-items:center;justify-
