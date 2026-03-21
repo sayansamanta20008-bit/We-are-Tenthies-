@@ -1238,9 +1238,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
   loadQ();
 });
 
-// Close modal on overlay click
-document.getElementById('lectureModal').addEventListener('click', function(e){
-  if(e.target === this) closeModal();
+// Expose all onclick functions on window so they survive module scripts
+// added by login extensions or other third-party scripts
+window.gotoPage=gotoPage;window.selBoard=selBoard;window.selClass=selClass;
+window.showChapters=showChapters;window.openLecture=openLecture;
+window.markWatched=markWatched;window.goToQuizFromModal=goToQuizFromModal;
+window.closeModal=closeModal;window.checkQuizLock=checkQuizLock;
+window.startChapterQuiz=startChapterQuiz;window.onQuizSubjectChange=onQuizSubjectChange;
+window.resetQuiz=resetQuiz;window.answerQ=answerQ;window.nextQ=nextQ;
+window.showResult=showResult;window.showToast=showToast;
+
+// Close modal on overlay click — guarded so an error above never breaks this
+document.addEventListener('DOMContentLoaded', ()=>{
+  const modal = document.getElementById('lectureModal');
+  if(modal) modal.addEventListener('click', function(e){ if(e.target===this) closeModal(); });
 });
 </script>
 </body>
